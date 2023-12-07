@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ $# != 1 ]; then
+  echo enter either select or window commands
+  exit 1
+fi
+
+case $1 in
+  "select") scrot  --select --line mode=edge;; 
+  "window") scrot -w $(xwininfo 2>/dev/null | sed '6q;d' | gawk '{ print $4 }') 1>/dev/null 2>/dev/null;;
+  *) echo enter either select or window command
+ ;;
+esac
+

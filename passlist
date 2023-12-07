@@ -1,0 +1,4 @@
+#!/bin/sh
+# this shell script requires the use of the unix pass password manager (https://www.passwordstore.org/)
+# this opens a custom dmenu script showing the passwords in the password store
+passmenu  -nb "#000000" -nf "#CCCCCC" -sb "#8811BB" -sf "#CCCCCC" -fn JetBrainsMonoNerdFont

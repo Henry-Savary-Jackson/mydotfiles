@@ -1,0 +1,5 @@
+set selection-clipboard clipboard
+set map u scroll half-up
+set map d scroll half-down
+set map R rotate
+set font JetBrainsMonoNerdFont
