@@ -17,13 +17,25 @@ ln -f $(pwd)/passlist /usr/bin/
 #link doas config
 ln -f $(pwd)/doas.conf /etc/doas.conf
 chown root:root doas.conf
-chmod 664 doas.conf
+chmod 644 doas.conf
 # link my screenshot scrot script
 ln -f $(pwd)/screenshot /usr/bin/
 
 ln -f $(pwd)/slim.conf /etc/slim.conf
 chown root:root slim.conf
 chmod 664 slim.conf
+
+ln -f $(pwd)/lock /usr/bin/
+chown root:root lock 
+chmod 775 lock
+
+ln -f $(pwd)/locker /usr/bin/
+chown root:root locker 
+chmod 775 locker
+
+ln -sf $(pwd)/customLogin /usr/share/slim/themes/
+chown -R root:root customLogin
+chmod -R 664 customLogin
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi

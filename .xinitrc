@@ -36,6 +36,6 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-./.fehbg & 
+./.fehbg & exec locker &  
 dwmblocks &
 exec dwm
