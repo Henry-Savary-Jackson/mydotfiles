@@ -34,6 +34,10 @@ ln -sf $(pwd)/zathura ~/.config/
 ln -sf $(pwd)/.vscode-oss ~/
 
 ln -sf $(pwd)/.th-client ~/
+
+
+ln -sf $(pwd)/sxhkd ~/.config/sxhkd
+
 # setting JAVA_HOME environment variable"
 echo "#!/bin/sh
 JAVA_HOME='/usr/lib/jvm/default'
@@ -43,6 +47,8 @@ export JAVA_HOME"| sudo tee /etc/profile.d/javahome.sh
 amixer sset Master unmute
 amixer sset Speaker unmute
 amixer sset Headphone unmute
+
+sudo usermod $USER -aG video  
 
 echo awaiting root permissions for following steps
 sudo ./root_setup.sh

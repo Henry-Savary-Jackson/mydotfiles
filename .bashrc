@@ -12,7 +12,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 alias vim=nvim
 alias vi=nvim
-alias sudo=doas
+#alias sudo=doas
 alias zathura='zathura --fork'
 # Created by `pipx` on 2023-10-20 09:38:49
 export PATH="$PATH:/home/themule/.local/bin"

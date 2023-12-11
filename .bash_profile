@@ -9,4 +9,4 @@
 export PATH="$PATH:/home/themule/.local/bin"
 export JAVA_HOME=/usr/lib/jvm/default
 
-startx
+#startx

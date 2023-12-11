@@ -9,33 +9,37 @@ if [ ! -d /etc/X11/xorg.conf.d ]; then
   mkdir /etc/X11/xorg.conf.d
 fi
 echo "putting mouse config"
-ln -f $(pwd)/vesa-swcursor.conf /etc/X11/xorg.conf.d/
+ln -sf $(pwd)/vesa-swcursor.conf /etc/X11/xorg.conf.d/
 
 # makes a hard link of my passlist shell script to $PATH 
-ln -f $(pwd)/passlist /usr/bin/ 
+ln -sf $(pwd)/passlist /usr/bin/ 
 
 #link doas config
-ln -f $(pwd)/doas.conf /etc/doas.conf
+ln -sf $(pwd)/doas.conf /etc/doas.conf
 chown root:root doas.conf
 chmod 644 doas.conf
 # link my screenshot scrot script
-ln -f $(pwd)/screenshot /usr/bin/
+ln -sf $(pwd)/screenshot /usr/bin/
 
-ln -f $(pwd)/slim.conf /etc/slim.conf
+ln -sf $(pwd)/slim.conf /etc/slim.conf
 chown root:root slim.conf
 chmod 664 slim.conf
 
-ln -f $(pwd)/lock /usr/bin/
+ln -sf $(pwd)/lock /usr/bin/
 chown root:root lock 
 chmod 775 lock
 
-ln -f $(pwd)/locker /usr/bin/
+ln -sf $(pwd)/locker /usr/bin/
 chown root:root locker 
 chmod 775 locker
 
 ln -sf $(pwd)/customLogin /usr/share/slim/themes/
 chown -R root:root customLogin
 chmod -R 664 customLogin
+
+ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
+
+cp  backlight.rules /etc/udev/rules.d/
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi
