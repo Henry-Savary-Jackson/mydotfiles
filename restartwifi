@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo modprobe -r brcmfmac_wcc
+sudo modprobe -r brcmfmac
+sudo modprobe brcmfmac_wcc
+sudo modprobe brcmfmac
+sudo systemctl restart iwd 

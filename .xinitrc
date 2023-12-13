@@ -36,5 +36,7 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+xrandr -s 1920x1200
+
 ./.fehbg & exec locker &  
-dwmblocks & picom -b & sxhkd &exec dwm
+dwmblocks & compton -b & sxhkd &exec dwm

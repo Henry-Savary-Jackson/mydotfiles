@@ -1,15 +1,22 @@
 #!/bin/sh
 
-capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 status=0
+
+charge_full=$(cat /sys/class/power_supply/BAT0/charge_full)
+
+charge_now=$(cat /sys/class/power_supply/BAT0/charge_now)
+
+
+
+percentage=$(printf '(%s/%s)*100\n' $charge_now $charge_full | bc -l)
+percentage=$(printf "%.*f \n" 0 $percentage)
+percentage=$(echo "($percentage)" "+0.5" | bc -l )
 
 if [[  $(cat /sys/class/power_supply/BAT0/status) = "Charging" ]]; then
   status=1
 fi
 
-
-status=$(( $status+(2**(( $capacity/25)+1)) ))
-
+status=$( printf "%.*f \n" 0 <<< echo $(echo "$status+(2**(( $percentage/25)+1))" |  bc) ) 
 
 case $status in
   0) ;;
@@ -26,5 +33,4 @@ esac
 
 
 
-
-printf '%d (%s)' $capacity $(cat /sys/class/power_supply/BAT0/status) 
+printf '%d%% (%s)' $percentage $(cat /sys/class/power_supply/BAT0/status) 

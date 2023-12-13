@@ -39,7 +39,9 @@ chmod -R 664 customLogin
 
 ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
-cp  backlight.rules /etc/udev/rules.d/
+ln -sf $(pwd)/backlight.rules /etc/udev/rules.d/
+
+ln -sf $(pwd)/restartwifi /usr/bin/
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi
