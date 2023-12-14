@@ -1,12 +1,12 @@
 
 alt + shift + Return 
-  st
+  kitty
 
 alt + shift + h
-  st htop
+  kitty htop
 
 alt + r
-  st ranger
+  kitty ranger
 
 alt + shift + f
   firefox
