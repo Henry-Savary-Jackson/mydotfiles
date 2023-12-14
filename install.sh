@@ -24,8 +24,8 @@ if [ ! -d $HOME/.local/share/fonts ] ; then
 	mkdir ~/.local/share/fonts
 fi
 cp JetBrainsMonoNerdFont-Regular.ttf ~/.local/share/fonts/JetBrainsMonoNerdFont-Regular.ttf
-if [  -d $HOME/.config/kitty ] ; then
-  rm $HOME/.config/kitty
+if [ ! -L $HOME/.config/kitty ] ; then
+  rm -rf $HOME/.config/kitty
 fi
 
 ln -sf $(pwd)/kitty ~/.config/
@@ -34,13 +34,25 @@ ln -sf $(pwd)/kitty ~/.config/
 ln -f $(pwd)/wallpaper.jpg ~/
 
 # symbolically link my zathura config folder
+if [ ! -L $HOME/.config/zathura ] ; then
+  rm -rf $HOME/.config/zathura
+fi
 ln -sf $(pwd)/zathura ~/.config/
 
+if [ ! -L $HOME/.vscode-oss ] ; then
+  rm -rf $HOME/.vscode-oss
+fi
 ln -sf $(pwd)/.vscode-oss ~/
 
+if [ ! -L $HOME/.th-client ] ; then
+  rm -rf $HOME/.th-client 
+fi
 ln -sf $(pwd)/.th-client ~/
 
 
+if [ ! -L $HOME/.config/sxhkd ] ; then
+  rm -rf $HOME/.config/sxhkd 
+fi
 ln -sf $(pwd)/sxhkd ~/.config/
 
 # setting JAVA_HOME environment variable"
