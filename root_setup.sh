@@ -39,7 +39,7 @@ chmod -R 664 customLogin
 
 ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
-cp  backlight.rules /etc/udev/rules.d/
+ln -sf  backlight.rules /etc/udev/rules.d/
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi
