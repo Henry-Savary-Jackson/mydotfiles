@@ -25,6 +25,13 @@ if [ ! -d $HOME/.local/share/fonts ] ; then
 fi
 cp JetBrainsMonoNerdFont-Regular.ttf ~/.local/share/fonts/JetBrainsMonoNerdFont-Regular.ttf
 
+if [ -d $HOME/.config/kitty/kitty.conf ] ; then
+  rm -rf $HOME/.config/kitty/kitty.conf 
+fi
+
+# kitty config
+ln -sf $(pwd)/kitty ~/
+
 # hard link the wallpaper image
 ln -f $(pwd)/wallpaper.jpg ~/
 

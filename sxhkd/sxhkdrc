@@ -1,24 +1,27 @@
 
-alt + r
-  st ranger
-
-alt + shift + return
-  st
+alt + shift + Return 
+  kitty
 
 alt + shift + h
-  st htop
+  kitty htop
 
-alt + n
-  st nvim
-
-alt + shift + v
-  codium
+alt + r
+  kitty ranger
 
 alt + shift + f
   firefox
 
+alt + shift + l
+  lock
+
+alt + shift + n
+  kitty nvim
+
 alt + shift + t
-  torbrower-launcher
+  torbrowser-launcher
+
+alt + shift + v
+  codium
 
 XF86MonBrightnessUp
   brillo -A 10
