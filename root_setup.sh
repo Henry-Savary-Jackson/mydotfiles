@@ -37,6 +37,9 @@ ln -sf $(pwd)/customLogin /usr/share/slim/themes/
 chown -R root:root customLogin
 chmod -R 664 customLogin
 
+ln -sf $(pwd)/picom.conf /etc/xdg/picom.conf
+
+
 ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
 ln -sf  backlight.rules /etc/udev/rules.d/
