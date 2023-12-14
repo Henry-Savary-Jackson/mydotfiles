@@ -1,4 +1,25 @@
 
+alt + r
+  st ranger
+
+alt + shift + return
+  st
+
+alt + shift + h
+  st htop
+
+alt + n
+  st nvim
+
+alt + shift + v
+  codium
+
+alt + shift + f
+  firefox
+
+alt + shift + t
+  torbrower-launcher
+
 XF86MonBrightnessUp
   brillo -A 10
 
