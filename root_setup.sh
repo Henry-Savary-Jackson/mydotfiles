@@ -37,6 +37,11 @@ ln -sf $(pwd)/customLogin /usr/share/slim/themes/
 chown -R root:root customLogin
 chmod -R 664 customLogin
 
+
+cp -f $(pwd)/dwm.desktop /usr/share/xsessions/dwm.desktop
+chown root:root dwm.desktop 
+chmod 644 doas.conf
+#
 ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
 ln -sf $(pwd)/backlight.rules /etc/udev/rules.d/
