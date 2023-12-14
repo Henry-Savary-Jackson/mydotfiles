@@ -21,10 +21,6 @@ chmod 644 doas.conf
 # link my screenshot scrot script
 ln -sf $(pwd)/screenshot /usr/bin/
 
-ln -sf $(pwd)/slim.conf /etc/slim.conf
-chown root:root slim.conf
-chmod 664 slim.conf
-
 ln -sf $(pwd)/lock /usr/bin/
 chown root:root lock 
 chmod 775 lock
@@ -32,10 +28,6 @@ chmod 775 lock
 ln -sf $(pwd)/locker /usr/bin/
 chown root:root locker 
 chmod 775 locker
-
-ln -sf $(pwd)/customLogin /usr/share/slim/themes/
-chown -R root:root customLogin
-chmod -R 664 customLogin
 
 
 cp -f $(pwd)/dwm.desktop /usr/share/xsessions/dwm.desktop

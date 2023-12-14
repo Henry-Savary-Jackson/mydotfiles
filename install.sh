@@ -41,7 +41,7 @@ ln -sf $(pwd)/.vscode-oss ~/
 ln -sf $(pwd)/.th-client ~/
 
 
-ln -sf $(pwd)/sxhkd ~/.config/sxhkd
+ln -sf $(pwd)/sxhkd ~/.config/
 
 # setting JAVA_HOME environment variable"
 echo "#!/bin/sh
