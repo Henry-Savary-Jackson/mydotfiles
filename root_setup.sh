@@ -36,6 +36,8 @@ chmod 644 doas.conf
 #
 ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
+ln -sf $(pwd)/sleep_cmds /usr/lib/systemd/system-sleep
+
 ln -sf $(pwd)/volumeinfo /usr/bin/volumeinfo
 
 ln -sf $(pwd)/backlight.rules /etc/udev/rules.d/

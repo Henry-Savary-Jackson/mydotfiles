@@ -16,7 +16,7 @@ if [[  $(cat /sys/class/power_supply/BAT0/status) = "Charging" ]]; then
   status=1
 fi
 
-status=$(echo "$status+(2^(( $percentage/25)))" |  bc)
+status=$(echo "$status+(2*(( $percentage/25)))" |  bc)
 
 percentage=$( printf "%.*f \n" 0 $percentage ) 
 
@@ -24,13 +24,13 @@ case $status in
   0) status='󰂎';;
   2) status='󰁼';;
   4)  status='󰁾';;
-  8)  status='󰂀';;
-  16) status='󰁹';;
+  6)  status='󰂀';;
+  12) status='󰁹';;
   1) status='󰢟 ';;
   3) status='󰂆 ';;
   5) status='󰢝 ';;
-  9) status='󰢞 ';;
-  17) status='󰂅 ';;
+  7) status='󰢞 ';;
+  13) status='󰂅 ';;
 esac
 
 printf '%s %d%%' $status $percentage 
