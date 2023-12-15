@@ -11,38 +11,31 @@ fi
 echo "putting mouse config"
 ln -sf $(pwd)/vesa-swcursor.conf /etc/X11/xorg.conf.d/
 
-# makes a hard link of my passlist shell script to $PATH 
-ln -sf $(pwd)/passlist /usr/bin/ 
-
 #link doas config
 ln -sf $(pwd)/doas.conf /etc/doas.conf
 chown root:root doas.conf
 chmod 644 doas.conf
-# link my screenshot scrot script
-ln -sf $(pwd)/screenshot /usr/bin/
-
-ln -sf $(pwd)/lock /usr/bin/
-chown root:root lock 
-chmod 775 lock
-
-ln -sf $(pwd)/locker /usr/bin/
-chown root:root locker 
-chmod 775 locker
-
 
 cp -f $(pwd)/dwm.desktop /usr/share/xsessions/dwm.desktop
 chown root:root dwm.desktop 
 chmod 644 doas.conf
 #
-ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
+for file in $(pwd)/programs/*
+do
+  ln -sf $file /usr/bin/
+  chmod 775 $file
+done
+
+# change owner of these important files to root
+chown root:root programs/lock 
+
+chown root:root programs/locker
+
 
 ln -sf $(pwd)/sleep_cmds /usr/lib/systemd/system-sleep
 
-ln -sf $(pwd)/volumeinfo /usr/bin/volumeinfo
-
 ln -sf $(pwd)/backlight.rules /etc/udev/rules.d/
 
-ln -sf $(pwd)/restartwifi /usr/bin/
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi
