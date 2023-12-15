@@ -6,6 +6,15 @@ if [[ ${curr_network} != "" ]] ; then
   
   connection_strength=$(nmcli -c no dev wifi | grep '^*' | awk '{ print $9 }')
 
+  case $connection_strength in
+    ▂___) connection_strength="󰤟 " 
+    ;;
+    ▂▄__) connection_strength="󰤢 " 
+    ;;
+    ▂▄▆_) connection_strength="󰤥 "
+    ;;
+    ▂▄▆█) connection_strength='󰤨 ';;
+  esac
   echo $connection_strength $curr_network
 
   exit 0

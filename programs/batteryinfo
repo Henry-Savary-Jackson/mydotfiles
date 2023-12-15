@@ -12,7 +12,7 @@ percentage=$(printf '(%s/%s)*100\n' $charge_now $charge_full | bc -l)
 percentage=$(printf "%.*f \n" 0 $percentage)
 percentage=$(echo "($percentage)" "+0.5" | bc -l )
 
-if [[  $(cat /sys/class/power_supply/BAT0/status) = "Charging" ]]; then
+if [[  $(cat /sys/class/power_supply/BAT0/status) == "Charging" ]]; then
   status=1
 fi
 
