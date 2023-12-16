@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xautolock -time 5 -locker lock -killtime 10 -killer "systemctl suspend" &
+xss-lock --transfer-sleep-lock -- lock 
+

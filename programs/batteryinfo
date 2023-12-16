@@ -1,0 +1,36 @@
+#!/bin/sh
+
+status=0
+
+charge_full=$(cat /sys/class/power_supply/BAT0/charge_full)
+
+charge_now=$(cat /sys/class/power_supply/BAT0/charge_now)
+
+
+
+percentage=$(printf '(%s/%s)*100\n' $charge_now $charge_full | bc -l)
+percentage=$(printf "%.*f \n" 0 $percentage)
+percentage=$(echo "($percentage)" "+0.5" | bc -l )
+
+if [[  $(cat /sys/class/power_supply/BAT0/status) == "Charging" ]]; then
+  status=1
+fi
+
+status=$(echo "$status+(2*(( $percentage/25)))" |  bc)
+
+percentage=$( printf "%.*f \n" 0 $percentage ) 
+
+case $status in
+  0) status='󰂎';;
+  2) status='󰁼';;
+  4)  status='󰁾';;
+  6)  status='󰂀';;
+  12) status='󰁹';;
+  1) status='󰢟 ';;
+  3) status='󰂆 ';;
+  5) status='󰢝 ';;
+  7) status='󰢞 ';;
+  13) status='󰂅 ';;
+esac
+
+printf '%s %d%%' $status $percentage 

@@ -11,36 +11,30 @@ fi
 echo "putting mouse config"
 ln -sf $(pwd)/vesa-swcursor.conf /etc/X11/xorg.conf.d/
 
-# makes a hard link of my passlist shell script to $PATH 
-ln -sf $(pwd)/passlist /usr/bin/ 
-
 #link doas config
 ln -sf $(pwd)/doas.conf /etc/doas.conf
 chown root:root doas.conf
 chmod 644 doas.conf
 # link my screenshot scrot script
-ln -sf $(pwd)/screenshot /usr/bin/
 
 ln -sf $(pwd)/slim.conf /etc/slim.conf
 chown root:root slim.conf
 chmod 664 slim.conf
 
-ln -sf $(pwd)/lock /usr/bin/
-chown root:root lock 
-chmod 775 lock
 
-ln -sf $(pwd)/locker /usr/bin/
-chown root:root locker 
-chmod 775 locker
+for file in $(pwd)/programs/*
+do
+  ln -sf $file /usr/bin/
+  chmod 775 $file
+done
 
-ln -sf $(pwd)/customLogin /usr/share/slim/themes/
-chown -R root:root customLogin
-chmod -R 664 customLogin
+# change owner of these important files to root
+chown root:root programs/lock 
+
+chown root:root programs/locker
 
 ln -sf $(pwd)/picom.conf /etc/xdg/picom.conf
 
-
-ln -sf $(pwd)/batteryinfo /usr/bin/batteryinfo
 
 ln -sf  backlight.rules /etc/udev/rules.d/
 
