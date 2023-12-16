@@ -29,11 +29,11 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   brillo -U 10
 
-XF86AudioMute
+alt + shift + m
   amixer set Master 1+ toggle
 
-XF86AudioRaiseVolume
+super + i
   amixer set Master 10%+
 
-XF86AudioLowerVolume
+super + l
   amixer set Master 10%-
