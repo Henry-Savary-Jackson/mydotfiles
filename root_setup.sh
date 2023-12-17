@@ -29,6 +29,10 @@ do
   chmod 775 $file
 done
 
+
+ln -sf $PWD/sudoers /etc/sudoers
+chown root:root sudoers
+
 # change owner of these important files to root
 chown root:root programs/lock 
 
