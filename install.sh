@@ -57,7 +57,7 @@ ln -sf $(pwd)/sxhkd ~/.config/
 
 # setting JAVA_HOME environment variable"
 echo "#!/bin/sh
-JAVA_HOME='/usr/lib/jvm/default'
+JAVA_HOME='/usr/lib/jvm/java'
 export JAVA_HOME"| sudo tee /etc/profile.d/javahome.sh 
  
 #allows for sound
