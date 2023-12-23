@@ -3,6 +3,7 @@ if [ $(whoami) != 'root' ]; then
   exit 1
 fi
 
+ln -sf $(pwd)/.gitconfig /root/.gitconfig
 
 # this allows for shwoing a mouse inside a qemu vm
 if [ ! -d /etc/X11/xorg.conf.d ]; then

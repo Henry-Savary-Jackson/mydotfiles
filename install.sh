@@ -70,5 +70,6 @@ amixer sset Headphone unmute
 
 sudo usermod $USER -aG video  
 
+sudo chown root:root ~/.config/gh/hosts.yml
 echo awaiting root permissions for following steps
 sudo ./root_setup.sh
