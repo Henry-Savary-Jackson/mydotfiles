@@ -35,6 +35,7 @@ chown root:root programs/locker
 
 ln -sf $(pwd)/picom.conf /etc/xdg/picom.conf
 
+ln -sf $(pwd)/customLogin /usr/share/slim/themes/
 
 ln -sf  backlight.rules /etc/udev/rules.d/
 
