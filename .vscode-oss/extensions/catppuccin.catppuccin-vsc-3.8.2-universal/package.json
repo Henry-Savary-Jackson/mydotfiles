@@ -160,7 +160,8 @@
 		"targetPlatform": "universal",
 		"isApplicationScoped": false,
 		"updated": true,
-		"installedTimestamp": 1702545383117,
+		"installedTimestamp": 1702382099984,
+		"pinned": false,
 		"preRelease": false
 	},
 	"devDependencies": {
