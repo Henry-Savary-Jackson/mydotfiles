@@ -25,12 +25,12 @@ case $status in
   2) status='󰁼';;
   4)  status='󰁾';;
   6)  status='󰂀';;
-  12) status='󰁹';;
+  8) status='󰁹';;
   1) status='󰢟 ';;
   3) status='󰂆 ';;
   5) status='󰢝 ';;
   7) status='󰢞 ';;
-  13) status='󰂅 ';;
+  9) status='󰂅 ';;
 esac
 
 printf '%s %d%%' $status $percentage 
