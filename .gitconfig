@@ -9,3 +9,8 @@
 	helper = !/usr/bin/gh auth git-credential
 [safe]
 	directory = /home/themule/mypacmanpackages
+	directory = /home/themule/mypacmanpackages
+	directory = /home/themule/mypacmanpackages
+	directory = /home/themule/mypacmanpackages
+	directory = /home/hsj/mypacmanpackages
+	directory = /home/hsj/mypacmanpackages

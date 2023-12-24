@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo modprobe -r hci-bcm4377
+sudo modprobe hci_bcm4377

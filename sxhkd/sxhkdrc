@@ -23,17 +23,23 @@ alt + shift + t
 alt + shift + v
   codium
 
+XF86KbdBrightnessUp
+  light -s sysfs/leds/:white:kbd_backlight -A 20
+
+XF86KbdBrightnessDown
+  light -s sysfs/leds/:white:kbd_backlight -U 20
+
 XF86MonBrightnessUp
   brillo -A 10
 
 XF86MonBrightnessDown
   brillo -U 10
 
-alt + shift + m
+XF86AudioMute
   amixer set Master 1+ toggle
 
-super + i
+XF86AudioRaiseVolume
   amixer set Master 10%+
 
-super + l
+XF86AudioLowerVolume
   amixer set Master 10%-
