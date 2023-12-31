@@ -1,23 +1,18 @@
 #!/bin/sh
+station=$(ip addr | gawk '/state UP/ { device = $2 ; output = gsub(":", "",device); print device}')
 
-curr_network=$(nmcli -c no dev wifi | grep '^*' | awk '{ print $3 }')
+network=$(iw dev $station link | gawk '/SSID:/ {print $2}' )
 
-if [[ ${curr_network} != "" ]] ; then
-  
-  connection_strength=$(nmcli -c no dev wifi | grep '^*' | awk '{ print $9 }')
+dbm=$(iw dev $station link | gawk '/signal:/ { print $2 }')
 
-  case $connection_strength in
-    ▂___) connection_strength="󰤟 " 
-    ;;
-    ▂▄__) connection_strength="󰤢 " 
-    ;;
-    ▂▄▆_) connection_strength="󰤥 "
-    ;;
-    ▂▄▆█) connection_strength='󰤨 ';;
-  esac
-  echo $connection_strength $curr_network
-
-  exit 0
+if [ $dbm -ge -40 ]; then
+ symbol="󰤨 "
+elif [ $dbm -le -40 ] && [ $dbm -gt -60 ]; then
+  symbol="󰤥 "
+elif [ $dbm -le -60 ] && [ $dbm -gt -80 ]; then
+  symbol="󰤢 "
+elif [ $dbm -le -80 ]; then
+  symbol="󰤟 " 
 fi
 
-echo "No wifi"
+echo $symbol $network
