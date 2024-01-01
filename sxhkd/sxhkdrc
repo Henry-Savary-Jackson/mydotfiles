@@ -24,7 +24,7 @@ alt + shift + v
   codium
 
 alt + shift + m
-  ncmpcpp
+  kitty ncmpcpp
 
 XF86KbdBrightnessUp
   light -s sysfs/leds/:white:kbd_backlight -A 20
