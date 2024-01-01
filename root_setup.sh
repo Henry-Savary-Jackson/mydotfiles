@@ -25,7 +25,7 @@ chmod 664 slim.conf
 
 for file in $(pwd)/programs/*
 do
-  ln -sf $file /usr/bin/
+  cp -f $file /usr/bin/
   chmod 775 $file
 done
 
