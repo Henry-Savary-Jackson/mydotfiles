@@ -1,0 +1,4 @@
+vscode-oss/extensions/*
+
+!vscode-oss/extensions/extensions.json
+
