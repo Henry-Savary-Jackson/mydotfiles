@@ -5,7 +5,7 @@ for file in * .[^.]*; do
 		if [ -f ../$file ]; then
 			rm ../$file
 		fi
-		ln -f $file ../$file 
+		ln -sf $PWD/$file ~/$file 
 	fi
 done
 
