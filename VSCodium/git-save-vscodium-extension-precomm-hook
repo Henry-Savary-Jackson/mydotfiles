@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ ! -z $GIT_DIR ]]; then
+  source ~/mydotfiles/VSCodium/save-extensions
+  git add ~/mydotfiles/VSCodium/extensions
+fi
+
