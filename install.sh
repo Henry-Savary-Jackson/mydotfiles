@@ -43,10 +43,18 @@ fi
 # symbolically link my zathura config folder
 ln -sf $(pwd)/zathura ~/.config/
 
-if [ ! -L $HOME/.vscode-oss ] ; then 
-  rm -rf $HOME/.vscode-oss  
-fi
-ln -sf $(pwd)/.vscode-oss ~/
+
+#VSCodium config
+ln -sf $PWD/VSCodium/settings.json ~/.config/VSCodium/User/settings.json
+
+extensions=$(cat $PWD/VSCodium/extensions)
+
+for extension_id in $extensions  
+do
+  echo $extension_id
+  codium --install-extension $extension_id
+done
+
 
 if [ ! -L $HOME/.th-client ] ; then 
   rm -rf $HOME/.th-client  
