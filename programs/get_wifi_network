@@ -1,17 +1,26 @@
 #!/bin/sh
 station=$(ip addr | gawk '/state UP/ { device = $2 ; output = gsub(":", "",device); print device}')
 
+station="wlan0"
+
 network=$(iw dev $station link | gawk '/SSID:/ {print $2}' )
+
+if [[ -z $network ]]; then
+  echo no WiFi
+  exit 
+fi
+
 
 dbm=$(iw dev $station link | gawk '/signal:/ { print $2 }')
 
-if [ $dbm -ge -40 ]; then
+
+if [ $dbm -ge -45 ]; then
  symbol="󰤨 "
-elif [ $dbm -le -40 ] && [ $dbm -gt -60 ]; then
+elif [ $dbm -le -45 ] && [ $dbm -gt -65 ]; then
   symbol="󰤥 "
-elif [ $dbm -le -60 ] && [ $dbm -gt -80 ]; then
+elif [ $dbm -le -65 ] && [ $dbm -gt -85 ]; then
   symbol="󰤢 "
-elif [ $dbm -le -80 ]; then
+elif [ $dbm -le -85 ]; then
   symbol="󰤟 " 
 fi
 
