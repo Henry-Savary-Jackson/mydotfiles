@@ -7,28 +7,34 @@ ln -f $PWD/dotfiles/.gitconfig $PWD/
 
 #add font to system
 ##if the folders do not exist, make them
-if [ ! -d $HOME/.local ]; then
+if [ ! -d ~/.local ]; then
 	mkdir ~/.local
 fi
 
-if [ ! -d $HOME/.local/share ]; then 
+if [ ! -d ~/.local/share ]; then 
 	mkdir ~/.local/share
 fi
 
-if [ ! -d $HOME/.local/share/fonts ] ; then
+if [ ! -d ~/.local/share/fonts ] ; then
 	mkdir ~/.local/share/fonts
 fi
 ln -sf $PWD/fonts/* ~/.local/share/fonts/
 
 # kitty config
-if [ ! -L $HOME/.config/kitty ] ; then 
-  rm -rf $HOME/.config/kitty  
+if [ ! -L ~/.config/kitty ] ; then 
+  rm -rf ~/.config/kitty  
 fi
 ln -sf $PWD/kitty ~/.config/
 
+# music player per user configuration
+if [ ! -L  ~/.config/mpd ] ; then
+  rm -rf ~/.config/mpd
+fi
+ln -sf $PWD/mpd ~/.config/
+
 # ncurses music player c plus plus
-if [ ! -L $HOME/.config/ncmpcpp ] ; then 
-  rm -rf $HOME/.config/ncmpcpp  
+if [ ! -L  ~/.config/ncmpcpp ] ; then 
+  rm -rf ~/.config/ncmpcpp  
 fi
 ln -sf $PWD/ncmpcpp ~/.config/
 
@@ -37,8 +43,8 @@ ln -sf $PWD/ncmpcpp ~/.config/
 ln -sf $PWD/wallpaper.jpg ~/
 
 # zathura config
-if [ ! -L $HOME/.config/zathura ] ; then 
-  rm -rf $HOME/.config/zathura
+if [ ! -L ~/.config/zathura ] ; then 
+  rm -rf ~/.config/zathura
 fi
 ln -sf $PWD/zathura ~/.config/
 
@@ -49,8 +55,8 @@ cat $PWD/VSCodium/extensions | xargs -I{} codium --install-extension {}
 
 
 # simple x hotkey daemon config
-if [ ! -L $HOME/.config/sxhkd ] ; then 
-  rm -rf $HOME/.config/sxhkd
+if [ ! -L ~/.config/sxhkd ] ; then 
+  rm -rf ~/.config/sxhkd
 fi
 ln -sf $PWD/sxhkd ~/.config/
  
