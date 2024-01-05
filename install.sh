@@ -67,8 +67,5 @@ amixer sset Headphone unmute
 
 sudo usermod $USER -aG video  
 
-# make sure only root can access github oatuh token
-sudo chown root:root ~/.config/gh/hosts.yml
-
 echo awaiting root permissions for following steps
 sudo ./root_setup.sh

@@ -6,10 +6,6 @@ fi
 
 shopt -s dotglob
 
-ls profile.d | xargs -I{} cp -f  profile.d/{} /etc/profile.d/{}
-
-cp -nf .gitconfig /root/.gitconfig
-
 if [ ! -d /etc/X11/xorg.conf.d ]; then
   mkdir /etc/X11/xorg.conf.d
 fi
