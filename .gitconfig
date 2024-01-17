@@ -1,17 +1,8 @@
 [user]
 	email = <96239862+Henry-Savary-Jackson@users.noreply.github.com>
 	name = Henry Savary-Jackson
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [safe]
-	directory = /home/themule/mypacmanpackages
-	directory = /home/themule/mypacmanpackages
-	directory = /home/themule/mypacmanpackages
-	directory = /home/themule/mypacmanpackages
-	directory = /home/hsj/mypacmanpackages
-	directory = /home/hsj/mypacmanpackages
-	directory = /home/hsj/mypacmanpackages
+	directory = ~/mypacmanpackages
+[credential]
+	credentialStore = gpg
+	helper = manager

@@ -2,5 +2,13 @@
     "workbench.colorTheme": "Catppuccin Macchiato",
     "redhat.telemetry.enabled": false,
     "editor.lineNumbers": "relative",
-    "editor.fontFamily": "'JetBrainsMonoNerdFont', 'monospace', monospace"
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-w>": false
+    },
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true
 }
