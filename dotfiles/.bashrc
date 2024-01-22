@@ -26,5 +26,6 @@ eval "$(pyenv init -)"
 
 eval "$(direnv hook bash)"
 
-export PS1=" \[\e[32;1;40m\] \u \w \[\e[37;0m\] >"
+export PS1=" \[\e[32;1;40m\] \u \W \[\e[37;0m\] >"
 export HISTTIMEFORMAT="%Y-%m-%d %T "
+
