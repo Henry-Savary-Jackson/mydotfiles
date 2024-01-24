@@ -9,4 +9,4 @@
 export PATH="$PATH:/home/themule/.local/bin"
 export JAVA_HOME=/usr/lib/jvm/default
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-startx
+

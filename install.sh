@@ -32,6 +32,12 @@ if [ ! -L  ~/.config/mpd ] ; then
 fi
 ln -sf $PWD/mpd ~/.config/
 
+if [ ! -L  ~/.config/dconf ] ; then
+  rm -rf ~/.config/dconf
+fi
+ln -sf $PWD/dconf ~/.config/
+
+
 # ncurses music player c plus plus
 if [ ! -L  ~/.config/ncmpcpp ] ; then 
   rm -rf ~/.config/ncmpcpp  

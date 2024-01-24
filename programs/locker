@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xidlehook  --detect-sleep --not-when-fullscreen --not-when-audio --timer 60 'lock' ''
