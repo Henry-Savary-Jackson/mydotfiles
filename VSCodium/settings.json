@@ -10,5 +10,6 @@
     "terminal.integrated.fontFamily": "JetBrains Mono",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 13,
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "git.openRepositoryInParentFolders": "always"
 }

@@ -11,10 +11,15 @@ if [ ! -d /etc/X11/xorg.conf.d ]; then
 fi
 ls xorg.conf.d | xargs -I{} cp -f  xorg.conf.d/{} /etc/X11/xorg.conf.d/{}
 
-cp -f $PWD/sudo/sudoers /etc/sudoers
 chown root:root sudo/sudoers
+cp -f $PWD/sudo/sudoers /etc/sudoers
 
 ls udevrules | xargs -I{} cp udevrules/{} /etc/udev/rules.d/{}
+
+chown root:root hyprland.desktop 
+cp -f hyprland.desktop /usr/share/xsessions
+
+ls programs | xargs -I{} cp programs/{} /usr/bin/{}
 
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi

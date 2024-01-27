@@ -37,6 +37,11 @@ if [ ! -L  ~/.config/dconf ] ; then
 fi
 ln -sf $PWD/dconf ~/.config/
 
+if [ ! -L  ~/.config/hypr ] ; then
+  rm -rf ~/.config/hypr
+fi
+ln -sf $PWD/hypr ~/.config/
+
 
 # ncurses music player c plus plus
 if [ ! -L  ~/.config/ncmpcpp ] ; then 
