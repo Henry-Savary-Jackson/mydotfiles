@@ -59,6 +59,15 @@ if [ ! -L ~/.config/zathura ] ; then
 fi
 ln -sf $PWD/zathura ~/.config/
 
+if [ ! -L ~/.swaylock ] ; then 
+  rm -rf ~/.swaylock
+fi
+ln -sf $PWD/.swaylock ~/.swaylock
+
+if [ ! -L ~/.swayidle ] ; then 
+  rm -rf ~/.swayidle
+fi
+ln -sf $PWD/.swayidle ~/.swayidle
 
 #VSCodium config
 ln -sf $PWD/VSCodium/settings.json ~/.config/VSCodium/User/settings.json
