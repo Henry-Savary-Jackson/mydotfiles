@@ -21,6 +21,14 @@ cp -f hyprland.desktop /usr/share/xsessions
 
 ls programs | xargs -I{} cp programs/{} /usr/bin/{}
 
+chown -R root:root waybar
+if [ ! -L /etc/xdg/waybar ] ; then 
+  rm -rf /etc/xdg/waybar
+fi
+ln -sf $PWD/waybar /etc/xdg/waybar
+
+
+
 # removes vi and vim to instead use neovim (https://neovim.io/)
 rm /usr/bin/vi
 rm /usr/bin/vim
