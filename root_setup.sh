@@ -25,7 +25,7 @@ chown -R root:root waybar
 if [ ! -L /etc/xdg/waybar ] ; then 
   rm -rf /etc/xdg/waybar
 fi
-ln -sf $PWD/waybar /etc/xdg/waybar
+ln -sf $PWD/waybar /etc/xdg/
 
 
 
