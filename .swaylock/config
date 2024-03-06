@@ -1,0 +1,15 @@
+font-size=45px
+font=JetBrainsMonoNerdFont
+indicator-radius=80px
+ignore-empty-password
+show-failed-attempts
+image=~/wallpaper.jpg
+
+line-uses-ring
+ring-color=222222aa
+ring-ver-color=3333eecc
+inside-ver-color=3333eeff
+ring-clear-color=3333eecc
+inside-clear-color=3333eeff
+ring-wrong-color=ff2222cc
+inside-wrong-color=ff2222ff

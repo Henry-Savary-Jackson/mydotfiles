@@ -37,4 +37,4 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 ./.fehbg & exec locker &  
-dwmblocks & picom -b & sxhkd & exec dwm
+dwmblocks & picom -b & sxhkd & exec dwm & udiskie
