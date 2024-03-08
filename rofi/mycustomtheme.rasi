@@ -1,0 +1,145 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.5
+ **/
+* {
+    red:                         rgba ( 220, 50, 47, 100 % );
+    white:                      rgba (188,188,188, 100 % ); 
+    black:                         rgba ( 0,0,0, 100 % );
+    purple:                        rgba ( 136, 17, 187, 100 % );
+    selected-active-foreground:  rgba ( 128, 203, 196, 100 % );
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    separatorcolor:              rgba ( 30, 37, 41, 100 % );
+    urgent-foreground:           rgba ( 255, 24, 68, 100 % );
+    alternate-urgent-background: var(black);
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    background-color:            transparent;
+    border-color:                var(purple);
+    normal-background:           var(black);
+    bordercolor:                 var(purple);
+    alternate-active-background: var(black);
+    active-foreground:           var(purple);
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    alternate-normal-foreground: var(foreground);
+    urgent-background:           var(black);
+    selected-normal-foreground:  var(purple);
+    selected-active-background:  var(black);
+    background:                  var(black);
+    selected-urgent-background:  var(black);
+    active-background:           var(black);
+    alternate-active-foreground: var(active-foreground);
+    alternate-normal-background: var(black);
+    foreground:                  rgba ( 193, 193, 193, 100 % );
+    alternate-urgent-foreground: var(urgent-foreground);
+    selected-urgent-foreground:  var(white);
+    spacing:                     2;
+    normal-foreground:           var(foreground);
+    selected-normal-background:  var(black);
+}
+window {
+    padding:          0;
+    background-color: var(background);
+    border:           5; 
+}
+mainbox {
+    padding: 1;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: var(separatorcolor);
+    border:       1px dash 0px 0px ;
+}
+textbox {
+    text-color: var(foreground);
+}
+listview {
+    padding:      15px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(purple);
+    spacing:      6px ;
+    fixed-height: 0;
+    border:       5px 0px 0px ;
+}
+element {
+    padding: 1px ;
+    border:  0;
+}
+element normal.normal {
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color:       var(urgent-foreground);
+}
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(purple);
+}
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(red);
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+}
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
+}
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(alternate-urgent-foreground);
+}
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(alternate-active-foreground);
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+}
+mode-switcher {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+inputbar {
+    padding:    5px ;
+    spacing:    0;
+    text-color: var(normal-foreground);
+    children:   [ "prompt","textbox-prompt-colon","entry","case-indicator" ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    spacing:    0;
+    text-color: var(active-foreground);
+}
+prompt {
+    spacing:    0;
+    text-color: var(active-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: var(normal-foreground);
+}

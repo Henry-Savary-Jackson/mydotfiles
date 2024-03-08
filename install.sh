@@ -26,6 +26,12 @@ if [ ! -L ~/.config/kitty ] ; then
 fi
 ln -sf $PWD/kitty ~/.config/
 
+# kitty config
+if [ ! -L ~/.config/rofi ] ; then 
+  rm -rf ~/.config/rofi  
+fi
+ln -sf $PWD/rofi ~/.config/
+
 # music player per user configuration
 if [ ! -L  ~/.config/mpd ] ; then
   rm -rf ~/.config/mpd
