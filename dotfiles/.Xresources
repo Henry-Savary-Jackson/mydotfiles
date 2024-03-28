@@ -1,0 +1,7 @@
+XTerm.vt100.reverseVideo: true 
+XTerm.vt100.faceName: JetBrainsMonoNerdFont:size=10:antialias=true
+XTerm.vt100.font: 7x13
+XTerm.vt100.selectToClipboard: true
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
