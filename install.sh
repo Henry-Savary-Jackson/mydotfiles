@@ -5,6 +5,7 @@ ln -sf $PWD/dotfiles/.* ~/
 
 ln -f $PWD/dotfiles/.gitconfig $PWD/
 
+
 #add font to system
 ##if the folders do not exist, make them
 if [ ! -d ~/.local ]; then
@@ -59,6 +60,8 @@ ln -sf $PWD/zathura ~/.config/
 ln -sf $PWD/VSCodium/settings.json ~/.config/VSCodium/User/settings.json
 cat $PWD/VSCodium/extensions | xargs -I{} codium --install-extension {}
 
+# add pre-commit hook to add extensions
+ln -sf $PWD/VSCodium/git-save-vscodium-extension-precomm-hook $PWD/.git/hooks/
 
 # simple x hotkey daemon config
 if [ ! -L ~/.config/sxhkd ] ; then 

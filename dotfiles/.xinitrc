@@ -1,5 +1,4 @@
 
-#tesing
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
@@ -36,5 +35,4 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-./.fehbg & exec locker &  
-dwmblocks & picom -b & sxhkd & exec dwm & udiskie
+./.fehbg & xscreensaver --no-splash & dwmblocks & picom -b & sxhkd & exec dwm & udiskie
