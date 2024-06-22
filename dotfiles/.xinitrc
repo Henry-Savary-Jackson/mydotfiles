@@ -35,4 +35,4 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-./.fehbg & xscreensaver --no-splash & dwmblocks & picom -b & sxhkd & exec dwm & udiskie
+./.fehbg & xscreensaver --no-splash & dwmblocks & picom -b & sxhkd & exec dwm & udiskie 

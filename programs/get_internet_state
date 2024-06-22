@@ -1,0 +1,45 @@
+#!/bin/bash
+
+interfaces=($(ls /sys/class/net))
+
+
+for interface in ${interfaces[@]} 
+do
+  state=$(cat /sys/class/net/$interface/operstate ) 
+
+  if  [[  $state ==   "up" ]]; then
+    active_interface=$interface
+    break 
+  fi
+done
+
+if [[ -z $active_interface ]]; then
+  echo no Internet
+ exit 1
+fi
+
+if [[ -d /sys/class/net/$active_interface/wireless ]]; then
+
+  network=$(iw dev $active_interface link | gawk '/SSID:/ {print $2}' )
+  dbm=$(iw dev $active_interface link | gawk '/signal:/ { print $2 }')
+  
+
+  if [ $dbm -ge -45 ]; then
+   symbol="󰤨 "
+  elif [ $dbm -le -45 ] && [ $dbm -gt -65 ]; then
+    symbol="󰤥 "
+  elif [ $dbm -le -65 ] && [ $dbm -gt -85 ]; then
+    symbol="󰤢 "
+  elif [ $dbm -le -85 ]; then
+    symbol="󰤟 " 
+  fi
+
+  echo $symbol $network
+else
+  ethernet_icon=󰈁
+  echo $ethernet_icon $active_interface
+fi
+
+
+
+

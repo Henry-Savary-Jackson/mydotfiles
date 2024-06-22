@@ -47,5 +47,3 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
   amixer set Master 10%-
 
-alt + m + {p,s,less, greater,b, f, minus, plus}
-  mpc { toggle, stop, prev, next, seek -10%, seek +10%, volume -10, volume +10}
