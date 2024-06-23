@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 source $GIT_DIR/VSCodium/save-extensions
 git add $GIT_DIR/VSCodium/extensions

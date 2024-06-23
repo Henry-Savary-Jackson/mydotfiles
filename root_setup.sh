@@ -25,8 +25,6 @@ chown root:root sudo/sudoers
 chown root:root programs/lock 
 chown root:root programs/locker
 
-cp -f $PWD/picom/picom.conf /etc/xdg/picom.conf
-
 cp -Rf $PWD/slim/customLogin /usr/share/slim/themes/
 chmod -R 645 slim/customLogin
 chown -R root:root slim/customLogin
