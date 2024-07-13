@@ -1,8 +1,9 @@
-Catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc
 foxundermoon.shell-format
 llvm-vs-code-extensions.vscode-clangd
+mikoz.black-py
+ms-python.debugpy
 ms-python.python
-Pivotal.vscode-boot-dev-pack
 rangav.vscode-thunder-client
 redhat.fabric8-analytics
 redhat.java

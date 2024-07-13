@@ -7,8 +7,8 @@
         "<C-v>": false,
         "<C-w>": false
     },
-    "terminal.integrated.fontFamily": "JetBrains Mono",
-  "editor.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "JetBrainsMonoNerdFont",
+  "editor.fontFamily": "JetBrainsMonoNerdFont",
   "editor.fontSize": 13,
   "editor.fontLigatures": true
 }

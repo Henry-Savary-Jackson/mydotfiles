@@ -1,4 +1,4 @@
 #!/bin/sh
 
-codium --list-extensions > ~/mydotfiles/VSCodium/extensions
+codium --list-extensions > ~/mydotfiles/.config/VSCodium/extensions
 
