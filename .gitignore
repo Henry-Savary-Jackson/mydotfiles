@@ -1,1 +1,7 @@
-.config/ncmpcpp/error.log
+.config/VSCodium/**
+!.config/VSCodium/
+!.config/VSCodium/git-save-vscodium-extensions
+!.config/VSCodium/settings.json
+!.config/VSCodium/save-extensions
+!.config/VSCodium/extensions
+**.log
