@@ -21,7 +21,7 @@ alt + shift + t
   torbrowser-launcher
 
 alt + shift + v
-  codium --no-sandbox
+  codium 
 
 alt + shift + m
   kitty ncmpcpp
@@ -38,12 +38,29 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
   brillo -U 10
 
-super + v; m
+XF86AudioMute
   amixer set Master 1+ toggle
 
-super + v; -
+XF86AudioRaiseVolume
   amixer set Master 10%+
 
-super + v; =
+XF86AudioLowerVolume
   amixer set Master 10%-
 
+XF86AudioNext
+  mpc next
+
+XF86AudioPrev
+  mpc prev
+
+XF86AudioPlay
+  mpc toggle
+
+Print
+  screenshot select
+
+super + m + d
+  mpc volume -10 
+
+super + m + i
+  mpc volume +10 
