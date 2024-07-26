@@ -12,7 +12,7 @@ alt + shift + f
   firefox
 
 alt + shift + l
-  lock
+  xscreensaver-command -lock 
 
 alt + shift + n
   kitty nvim
